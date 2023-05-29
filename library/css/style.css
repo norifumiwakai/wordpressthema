@@ -708,6 +708,7 @@ body header .menu-list .menu {
 body header .menu-list .menu a {
   color: #fff;
   text-decoration: none;
+  position: relative;
 }
 body header .menu-list .menu a:after {
   position: absolute;
