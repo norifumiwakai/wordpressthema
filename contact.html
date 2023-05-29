@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./library/css/reset.css" />
+    <link rel="stylesheet" href="./library/css/style.css" />
+    <link rel="stylesheet" href="./library/js/script.js" />
+    <link rel="stylesheet" href="./library/slick/slick.css">
+    <link rel="stylesheet" href="./library/slick/slick-theme.css">
+
+</head>
+<body>
+    <header class="">
+        <div class="head">
+        <div>
+            <a href="./index.html"><img class="rogo" src="./library/images/logo.png" alt=""/></a>
+        </div>
+        <nav class="header-nav">
+            <ul class="menu-list flex-rc">
+            <li class="menu"><a href="./index.html">HOME</a></li>
+            <li class="menu"><a href="./about.html">ABOUT US</a></li>
+            <li class="menu"><a href="./news.html">NEWS</a></li>
+            <li class="menu"><a href="./service.html">SERVICE</a></li>
+            <li class="menu"><a href="./contact.html">CONTACT</a></li>
+            </ul>
+        </nav>
+
+        <div class="btn_trigger">
+            <span class="bar bar_top"></span>
+            <span class="bar bar_mid"></span>
+            <span class="bar bar_bottom"></span>
+        </div>
+        </div>
+    </header>
+
+    
+        <div class="contact_fv">
+            <div class="background"></div>
+            <div class="catch">
+                <h1 class="title">CONTACT</h1>
+                <p class="message">
+                    当社へご相談、お問い合わせいただく場合は下記のフォームをご入力ください。返信には3営業日ほど頂いきますのでご了承ください。
+                </p>
+            </div>
+        </div>
+    
+    <main>
+        <!-- ーーーーーーformーーーーーー -->
+        <form action="./mail.php" method="post">
+            <div>
+            <div class="label_section">
+                <label class="label" for="check-a"
+                >ご用件 <span class="required"></span></label>
+                <input
+                class="input_area"
+                id="name"
+                type="name"
+                autocomplete="name"
+                required/>
+            </div>
+
+            <div class="label_section">
+                <label class="label_text" for="email">氏名
+                </label>
+                <input
+                class="input_area"
+                id="name"
+                type="name"
+                autocomplete="name"
+                required/>
+            </div>
+            <div class="label_section">
+                <label class="label_text" for="email">氏名（フリガナ）
+                </label>
+                <input
+                class="input_area"
+                id="name"
+                type="name"
+                autocomplete="name"
+                required/>
+            </div>
+
+            <div class="label_section">
+                <label class="label_text" for="email">電話番号
+                </label>
+                <input
+                class="input_area"
+                id="tel"
+                type="tel"
+                autocomplete="tel"
+                required/>
+            </div>
+            <div class="label_section">
+                <label class="label_text" for="email">メールアドレス </label>
+                <input
+                class="input_area"
+                id="email"
+                type="email"
+                autocomplete="email"
+                required
+                />
+            </div>
+            <div class="label_section">
+                <label class="label_text" for="remarks">お問い合わせ内容 </label>
+                <input
+                class="input_area"
+                id="remarks"
+                type="remarks"
+                autocomplete="remarks"
+                required
+                />
+        </div>
+            </div>
+            <div class="policy">
+            <!-- <div class="attention">
+                <a href="./privacy.html">個人情報の取り扱いに関して</a>
+            </div>
+    
+            <input type="checkbox" id="policy_checkbox" />
+            <label for="policy_checkbox"
+                >個人情報の取り扱いに関する内容に同意する</label> --> 
+            <p><input type="submit" value="送信" /></p>
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <div class="company">
+            <img src="./library/images/logo.png" alt="">
+            <p class="company-date first">会社名</p>
+            <p class="company-date">〒000-0000</p>
+            <p class="company-date">東京都新宿区0-00-000丸々ビル2F</p>
+        </div>
+        <div class="footer-nemu">
+            <nav class="footer-nav">
+                <ul class="footer-list flex-rc">
+                <li class="footer-name"><a href="./index.html">HOME</a></li>
+                <li class="footer-name"><a href="./about.html">ABOUT US</a></li>
+                <li class="footer-name"><a href="./about.html">GALLERYS</a></li>
+                <li class="footer-name"><a href="./service.html">SERVICE</a></li>
+                <li class="footer-name"><a href="./contact.html">CONTACT</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="./library/js/script.js"></script>
+<script src="./library/slick/slick.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+    $('.slick1').slick({
+        autoplay: true,
+        dots: true,
+        infinite: true,
+        slidesToShow: 3,
+        slidesToScroll:1,
+        responsive: [
+        {
+        breakpoint: 769, // 399px以下のサイズに適用
+        settings: {
+        slidesToShow: 1,
+        },
+        },
+    ],
+    });
+    });
+</script>
+</body>
+</html>
