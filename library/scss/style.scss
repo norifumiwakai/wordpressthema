@@ -1,9 +1,4 @@
-@use "global/about" ;
-@forward "global/anime" ;
-@forward "global/contact" ;
-@forward "global/service" ;
-@forward "global/news" ;
-
+@forward "global/anime";
 
 body{
     // font-family: 'arial';
@@ -14,7 +9,7 @@ body{
     font-size: 15px;
     font-family: 'Noto Sans Javanese';
 
-    header{
+    header {
         box-sizing: border-box;
         z-index: 999;
         position: absolute;
@@ -24,96 +19,110 @@ body{
         top: 0;
         left: 0; 
         background: rgba(23, 23, 23, 0.7);
-        .head{
+    
+        .head {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            .rogo{
+    
+            .rogo {
                 height: 34px;
             }
         }
+    
         .btn_trigger {
             display: none;
         }
     
-    .menu-list {
-        display: flex;
-        align-items: center;
-    .menu{
-        margin-right: 60px;
-        a{
-        color: #fff;
-        text-decoration: none;
-        &:after {
-            position: absolute;
-            left: 0;
-            content: '';
-            width: 100%;
-            height: 2px;
-            background: #ffffff;
-            bottom: -1px;               /*アンダーラインがaタグの下端から現れる*/
-            transform: scale(0, 1);     /*アンダーラインの縮尺比率。ホバー前はx方向に0*/
-            transform-origin: left top; /*変形（アンダーラインの伸長）の原点がaタグ（各メニュー）の左端*/
-            transition: transform 0.3s; /*変形の時間*/
-            }
-            &:hover::after {
-            transform: scale(1, 1);     /*ホバー後、x軸方向に1（相対値）伸長*/
+        .menu-list {
+            display: flex;
+            align-items: center;
+    
+            li {
+                margin-right: 60px;
+    
+                a {
+                    color: #FFFFFF;
+                    text-decoration: none;
+                    position: relative;
+                        &:after {
+                            position: absolute;
+                            left: 0;
+                            content: '';
+                            width: 100%;
+                            height: 2px;
+                            background: #ffffff;
+                            bottom: -1px;  
+                            transform: scale(0, 1);
+                            transform-origin: left; 
+                            transition: transform 0.3s; 
+                        }
+                        &:hover::after {
+                        transform: scale(1,1);
+                    }
+                }
             }
         }
-        }
     }
-    }
+    
 
     .fv{
         width: 100%;
-        background-image: url(../images/top.png);
-        background-repeat: no-repeat;
-        background-position: center 0;
-        background-size: cover;
+        height: 730px;
         position: relative;
-        height: 848px;
+    
         &::before {
             content: "";
             position: absolute;
-            top: 0;  bottom: 0;
-            left: 0;  right: 0;
+            top: 0;  
+            bottom: 0;
+            left: 0;  
+            right: 0;
             background: black;
             opacity:0.5;
         }
+    
         .background{
             position: absolute;
-            
             width: 512px;
             height: 721px;
             left: 0px;
             top: 7px;
-            transform: translate(0px,120px);
             background: rgba(23, 23, 23, 0.7);
+    
+
+        }
+        img {
+            width: 100%;
+            height: 730px;
         }
         .catch{
-        width: 811px;
-        top: 60%;
-        left: 35%;
-        transform: translate(-50%, -50%);
-        position: relative;
-        h1{
-            font-family: 'Arial';
-            font-style: italic;
-            font-weight: 400;
-            font-size: 75px;
-            line-height: 86px;
-            letter-spacing: 0.02em;
+            position: absolute;
+            width: 811px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-75%, -50%);
+    
+            h1{
+                font-family: 'Arial';
+                font-style: italic;
+                font-weight: 400;
+                font-size: 75px;
+                line-height: 86px;
+                letter-spacing: 0.02em;
+            }
+    
+            .message{
+                margin-top: 65px;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 17px;
+                line-height: 29px;
+                letter-spacing: 0.1em;
+            }
         }
-        .message{
-            margin-top: 65px;
-            font-style: normal;
-            font-weight: 400;
-            font-size: 17px;
-            line-height: 29px;
-            letter-spacing: 0.1em;
-        }
-        }
-}
+    }
+    
 
 main{
     padding-top: 59px;
@@ -124,7 +133,7 @@ main{
         .section{
         visibility: hidden;
         transition: opacity 2s, visibility 2s;
-        display: flex;
+        
         padding-top: 235px;
         &:last-child{
             margin-top: 250px;
@@ -132,13 +141,11 @@ main{
         }
         }
         .section{
-
             opacity: 0;
             // transform: translateY(30%);
             &.is-animation {
                 opacity: 1;
                 visibility: visible;
-
                 @for $i from 1 to 1 {
                 &:nth-child(#{$i}) {
                     animation: fadeInText 1s ease 0.1 * $i + s forwards;
@@ -152,7 +159,7 @@ main{
                     height: 311px;
                     padding: 61px 137px 120px 55px;
                     background: rgba(23, 23, 23, 0.8);
-                    // position: absolute;
+                    position: absolute;
                     .section-box2{
                         border-left: 2px solid #FFFFFF;
                         height: 228px;
@@ -168,60 +175,71 @@ main{
                     line-height: 186%;
                     letter-spacing: 0.1em;
                     margin-left: 24px;
+                    font-size: 15px;
                     }
                     .more{
                         margin-top: 82px;
                         a{
-                            color: #ffffff;
-                            border: 1px solid #FFFFFF;
-                            padding: 20px 84px;
-                            text-decoration: none;
-                            font-weight: 400;
-                            font-size: 16px;
-                            letter-spacing: 0.055em;
-                            &:hover{
-                                color: #242730;
-                                background-color: #ffffff;
-                                content: '';
-                                transition: transform 0.3s; 
-                            }
+                        color: #ffffff;
+                        border: 1px solid #FFFFFF;
+                        padding: 20px 84px;
+                        text-decoration: none;
+                        font-weight: 400;
+                        font-size: 16px;
+                        letter-spacing: 0.055em;
+                        transition: color 0.3s, background-color 0.3s; // colorとbackground-colorの遷移を設定
+                        &:hover{
+                            color: #242730;
+                            background-color: #ffffff;
+                            content: '';
                         }
                     }
                 }
             }
-            .section-ph{
-                // width: 836px;
-                height: 627px;
-                right: 300px;
-                position: relative;
-                transform: translate(100px);
             }
+                .section-ph{
+                    // width: 836px;
+                    height: 627px;
+                    right: 300px;
+                    // position: relative;
+                    transform: translate(380px);
+                }
+                .ser-ph{
+                    right: -106px;
+                    transform: translate(0px);
+                }
         }
-
         .second{
-            flex-direction: row-reverse;
-            // .service{
-            //     right: 109px;
-            //     position: absolute;
-            // }
-            .sofa{
-                right: -98px;
+                flex-direction: row-reverse;
+                .service{
+                    right: 109px;
+                    position: absolute;
+                }
+                .sofa{
+                    right: -98px;
+                }
             }
         }
-    }
-
     // -------NEWS--------
     .news{
         background: rgba(23, 23, 23, 0.9);
         .news-box{
             display: flex;
             width: 1440px;
-            height: 996px;
+            height: 1130px;
             margin: auto;
             margin-top: 208px;
-            
             .news-title{
+                background-image: url(../images/news1.png);
+                width: 709px;
+                height: 100%;
+                &::before{
+                    background-color:rgba(0, 0, 0, 0.4);
+                    /* ↓全体を覆うように配置 */
+                    position: absolute;
+                }
                 h2{
+                    width: 185px;
                     font-family: 'Arial';
                     font-style: italic;
                     font-weight: 400;
@@ -229,7 +247,7 @@ main{
                     line-height: 40px;
                     letter-spacing: 0.4em;
                     top: 50%;
-                    left: 90%;
+                    left: 50%;
                     transform: translate(-50%, -50%);
                     position: relative;
                     &::before{
@@ -239,46 +257,34 @@ main{
                     }
                 }
             }
-            .news-title{
-                background-image: url(../images/news1.png);
-                width: 709px;
-                &::before{
-                    background-color:rgba(0, 0, 0, 0.4);
-                    /* ↓全体を覆うように配置 */
-                    position: absolute;
-                }
-                h2{
-                    margin: auto;
-                    transform: translate(-50%,-50%);
-                }
-            }
             .news-list{
                 background-size: 100%;
                 width: 731px;
-                padding-top: 173px;
+                padding-top: 80px;
                 .news-name{
                     width: 564px;
                     margin: auto;
-                    padding: 46px 0 46px 0;
+                    padding: 46px 0 46px 50px;
                     border-top: solid 2px #ffffff;
-                    
-                    time{
-                        margin-left: 23px;
-                    }
-                    a{
-                        color: #ffffff;
-                        text-decoration: none;
-                        margin-left: 54px;
+                    display: flex;
+                    text-decoration: none;
+                    color: #FFFFFF;
+                        a{
+                            color: #fff;
+                            text-decoration: none;
+                        p{
+                            margin-left: 54px;
+                        }
                     }
                 }
-                .last{
+                .news-name:last-of-type{
                     border-bottom: solid 2px #ffffff;
                 }
                 .more{
                     
                     width: 216px;
                     padding: 46px 0 46px 0;
-                    margin: auto;
+                    margin: 40px auto;
                     a{
                         text-decoration: none;
                         border: 1px solid #FFFFFF;
@@ -321,11 +327,12 @@ main{
                     }
                 }
             .slick1{
+                display: flex;
             margin-top: 74px;
             img{
                 width: 577px;
                 height: 386px;
-                margin-right: 21px;
+                margin: auto;
             }
             }
         }
@@ -350,6 +357,7 @@ footer{
             width: 169px;
         }
         .company-date{
+            font-size: 16px;
             &:first-child{
                 margin-top: 41px;
             }
@@ -363,6 +371,7 @@ footer{
             display: flex;
         }
         a{
+            font-size: 16px;
             color: #ffffff;
             text-decoration: none;
             margin-right: 64px;
@@ -448,7 +457,8 @@ footer{
         z-index: 2;
     }
 
-    .menu-list.flex-rc {
+    .menu-list {
+        
         background: rgba(23, 23, 23, 0.9);
         width: 100%;
         height: 100%;
@@ -501,7 +511,7 @@ body{
             width: 100%;
         }
             .catch{
-                left: 50%;
+                margin: auto;
             }
         
     }
@@ -519,6 +529,9 @@ body{
                     text-align: center;
                     transform: translate(50%, 10%);
                 }
+                .ser-ph{
+                    right: 300px;
+                }
                 .sofa{
                     width: 590px;
                     height: auto;
@@ -527,36 +540,34 @@ body{
                 }
             }
         }
-
         .news{
             .news-box{
                 width: auto;
+                height: 1340px;
                 display: block;
                 .news-title{
                     background-image: none;
+                    height: 10%;
                     h2{
                         transform: translate(-50%, 200%);
                     }
                 }
                 .news-list{
+                    padding-top: 0;
+                    margin-top: 150px;
+                    width: unset;
                     .more{
+                        margin-top: 50px;
                         a{
                             margin: auto;
                         }
-
                     }
                 }
             }
         }
-
         .gallery{
             .gallery-box{
                 width: 768px;
-                .slick1{
-                    img{
-                        
-                    }
-                }
             }
         }
 }
