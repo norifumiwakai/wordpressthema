@@ -9,7 +9,7 @@ body{
     font-size: 15px;
     font-family: 'Noto Sans Javanese';
 
-    header{
+    header {
         box-sizing: border-box;
         z-index: 999;
         position: absolute;
@@ -19,56 +19,52 @@ body{
         top: 0;
         left: 0; 
         background: rgba(23, 23, 23, 0.7);
-        .head{
+    
+        .head {
             display: flex;
             align-items: center;
             justify-content: space-between;
-            .rogo{
+    
+            .rogo {
                 height: 34px;
             }
         }
+    
         .btn_trigger {
             display: none;
         }
     
-    .menu-list {
-        
-        
-        display: flex;
-        align-items: center;
-        
-        li{
-            margin-right: 60px;
-            a{
-            color: #FFFFFF;
-            text-decoration: none;
-        }
-        }
-        
-    .menu{
-        margin-right: 60px;
-        a{
-        color: #fff;
-        text-decoration: none;
-        &:after {
-            position: absolute;
-            left: 0;
-            content: '';
-            width: 100%;
-            height: 2px;
-            background: #ffffff;
-            bottom: -1px;               /*アンダーラインがaタグの下端から現れる*/
-            transform: scale(0, 1);     /*アンダーラインの縮尺比率。ホバー前はx方向に0*/
-            transform-origin: left top; /*変形（アンダーラインの伸長）の原点がaタグ（各メニュー）の左端*/
-            transition: transform 0.3s; /*変形の時間*/
-            }
-            &:hover::after {
-            transform: scale(1, 1);     /*ホバー後、x軸方向に1（相対値）伸長*/
+        .menu-list {
+            display: flex;
+            align-items: center;
+    
+            li {
+                margin-right: 60px;
+    
+                a {
+                    color: #FFFFFF;
+                    text-decoration: none;
+                    position: relative;
+                        &:after {
+                            position: absolute;
+                            left: 0;
+                            content: '';
+                            width: 100%;
+                            height: 2px;
+                            background: #ffffff;
+                            bottom: -1px;  
+                            transform: scale(0, 1);
+                            transform-origin: left; 
+                            transition: transform 0.3s; 
+                        }
+                        &:hover::after {
+                        transform: scale(1,1);
+                    }
+                }
             }
         }
-        }
     }
-    }
+    
 
     .fv{
         width: 100%;
@@ -137,7 +133,7 @@ main{
         .section{
         visibility: hidden;
         transition: opacity 2s, visibility 2s;
-        display: flex;
+        
         padding-top: 235px;
         &:last-child{
             margin-top: 250px;
@@ -145,13 +141,11 @@ main{
         }
         }
         .section{
-
             opacity: 0;
             // transform: translateY(30%);
             &.is-animation {
                 opacity: 1;
                 visibility: visible;
-
                 @for $i from 1 to 1 {
                 &:nth-child(#{$i}) {
                     animation: fadeInText 1s ease 0.1 * $i + s forwards;
@@ -165,7 +159,7 @@ main{
                     height: 311px;
                     padding: 61px 137px 120px 55px;
                     background: rgba(23, 23, 23, 0.8);
-                    // position: absolute;
+                    position: absolute;
                     .section-box2{
                         border-left: 2px solid #FFFFFF;
                         height: 228px;
@@ -186,47 +180,46 @@ main{
                     .more{
                         margin-top: 82px;
                         a{
-                            color: #ffffff;
-                            border: 1px solid #FFFFFF;
-                            padding: 20px 84px;
-                            text-decoration: none;
-                            font-weight: 400;
-                            font-size: 16px;
-                            letter-spacing: 0.055em;
-                            &:hover{
-                                color: #242730;
-                                background-color: #ffffff;
-                                content: '';
-                                transition: transform 0.3s; 
-                            }
+                        color: #ffffff;
+                        border: 1px solid #FFFFFF;
+                        padding: 20px 84px;
+                        text-decoration: none;
+                        font-weight: 400;
+                        font-size: 16px;
+                        letter-spacing: 0.055em;
+                        transition: color 0.3s, background-color 0.3s; // colorとbackground-colorの遷移を設定
+                        &:hover{
+                            color: #242730;
+                            background-color: #ffffff;
+                            content: '';
                         }
                     }
                 }
             }
-            .section-ph{
-                // width: 836px;
-                height: 627px;
-                right: 300px;
-                position: relative;
-                transform: translate(100px);
             }
-            .ser-ph{
-                right: -106px;
-            }
+                .section-ph{
+                    // width: 836px;
+                    height: 627px;
+                    right: 300px;
+                    // position: relative;
+                    transform: translate(380px);
+                }
+                .ser-ph{
+                    right: -106px;
+                    transform: translate(0px);
+                }
         }
-
         .second{
-            flex-direction: row-reverse;
-            // .service{
-            //     right: 109px;
-            //     position: absolute;
-            // }
-            .sofa{
-                right: -98px;
+                flex-direction: row-reverse;
+                .service{
+                    right: 109px;
+                    position: absolute;
+                }
+                .sofa{
+                    right: -98px;
+                }
             }
         }
-    }
-
     // -------NEWS--------
     .news{
         background: rgba(23, 23, 23, 0.9);
@@ -236,8 +229,6 @@ main{
             height: 1130px;
             margin: auto;
             margin-top: 208px;
-            
-
             .news-title{
                 background-image: url(../images/news1.png);
                 width: 709px;

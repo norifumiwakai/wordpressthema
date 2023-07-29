@@ -1,7 +1,5 @@
 <?php get_header(); ?>
 
-
-
         <div class="fv">
             <div class="background"></div>
             <img class="top" src="<?php echo esc_url(get_theme_file_uri('/library/images/fv709.png')); ?>" alt="<?php bloginfo('name'); ?>" >
@@ -73,33 +71,33 @@
                     
                 </div>
             </div>
-            </div> 
+        </div> 
 
         <!-- ーーーーーーGALLERYーーーーーー -->    
         <div class="gallery">
-        <div class="gallery-box">
-            <h2>GALLERY</h2>
-            <div class="slick1">
-                <div>
-                    <img class="section-ph" src="<?php echo esc_url(get_theme_file_uri('./library/images/gallery1.png')); ?>" alt="<?php bloginfo('name'); ?>" >
-                </div>
-                <div>
-                    <img class="section-ph" src="<?php echo esc_url(get_theme_file_uri('./library/images/gallery2.png')); ?>" alt="<?php bloginfo('name'); ?>" >
-                </div>
-                <div>
-                    <img class="section-ph" src="<?php echo esc_url(get_theme_file_uri('./library/images/gallery3.png')); ?>" alt="<?php bloginfo('name'); ?>" >
-                </div>
-                <div>
-                    <img class="section-ph" src="<?php echo esc_url(get_theme_file_uri('./library/images/gallery4.png')); ?>" alt="<?php bloginfo('name'); ?>" >
-                </div>
-                <div>
-                    <img class="section-ph" src="<?php echo esc_url(get_theme_file_uri('./library/images/gallery5.png')); ?>" alt="<?php bloginfo('name'); ?>" >
-                </div>
-                <div>
-                    <img class="section-ph" src="<?php echo esc_url(get_theme_file_uri('./library/images/gallery6.png')); ?>" alt="<?php bloginfo('name'); ?>" >
+            <div class="gallery-box">
+                <h2>GALLERY</h2>
+                <div class="slick1">
+                    <div>
+                        <img class="gallery-ph" src="<?php echo esc_url(get_theme_file_uri('./library/images/gallery1.png')); ?>" alt="<?php bloginfo('name'); ?>" >
+                    </div>
+                    <div>
+                        <img class="gallery-ph" src="<?php echo esc_url(get_theme_file_uri('./library/images/gallery2.png')); ?>" alt="<?php bloginfo('name'); ?>" >
+                    </div>
+                    <div>
+                        <img class="gallery-ph" src="<?php echo esc_url(get_theme_file_uri('./library/images/gallery3.png')); ?>" alt="<?php bloginfo('name'); ?>" >
+                    </div>
+                    <div>
+                        <img class="gallery-ph" src="<?php echo esc_url(get_theme_file_uri('./library/images/gallery4.png')); ?>" alt="<?php bloginfo('name'); ?>" >
+                    </div>
+                    <div>
+                        <img class="gallery-ph" src="<?php echo esc_url(get_theme_file_uri('./library/images/gallery5.png')); ?>" alt="<?php bloginfo('name'); ?>" >
+                    </div>
+                    <div>
+                        <img class="gallery-ph" src="<?php echo esc_url(get_theme_file_uri('./library/images/gallery6.png')); ?>" alt="<?php bloginfo('name'); ?>" >
+                    </div>
                 </div>
             </div>
-        </div>
         </div>
     </main>
 
